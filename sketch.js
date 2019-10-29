@@ -27,7 +27,7 @@ function mouseReleased(){
   r = int(random(0, 255));
   g = int(random(0, 255));
   b = int(random(0, 255));
-  head = int(random (0, 7))
+  head = 1 //int(random (0, 7))
 }
 
 function monster(tcornerX1, tcornerY1, tcornerX2, tcornerY2, tcornerX3, tcornerY3, tcornerX4, tcornerY4, head, r, g, b){
@@ -39,14 +39,28 @@ function monster(tcornerX1, tcornerY1, tcornerX2, tcornerY2, tcornerX3, tcornerY
   fill (g, b, r)
   if (head == 0){
 	  circle (450, abs(tcornerY1 + tcornerY2)/2, 150);
+	  fill("white");
+	  circle (450,  abs(tcornerY1 + tcornerY2)/2, 50);
+	  fill("black")
+	  circle (450,  abs(tcornerY1 + tcornerY2)/2, 30);
+	  
   }
   if (head == 1){
 	  square (tcornerX1+30, (abs(tcornerY1 + tcornerY2)/2)-50, 125);
+	  fill("white");
+	  circle (tcornerX1 + 120,  abs(tcornerY1 + tcornerY2)/2+30, 50);
+	  fill("black")
+	  circle (tcornerX1 + 120,  abs(tcornerY1 + tcornerY2)/2+30, 30);
   }
   if (head == 2){
 	  translate (tcornerX1+30, (abs(tcornerY1 + tcornerY2)/2)-50);
 		rotate(PI/4);
 		square (0, 0, 125);
+	  fill("white");
+	  circle (90, 120, 50);
+	  fill("black")
+	  circle (90, 120, 30);
+	  
   }
   if (head == 3){
 	  square (tcornerX1+30, (abs(tcornerY1 + tcornerY2)/2)-50, 125, 40);
@@ -55,11 +69,26 @@ function monster(tcornerX1, tcornerY1, tcornerX2, tcornerY2, tcornerX3, tcornerY
 	  translate (tcornerX1+30, (abs(tcornerY1 + tcornerY2)/2)-50);
 		rotate(PI/4);
 		square (0, 0, 125, 40);
+	  fill("white");
+	  circle (90, 120, 50);
+	  fill("black")
+	  circle (90, 120, 30);
+	  
   }
   if (head == 5){
 	  triangle (450, (abs(tcornerY1 + tcornerY2)/2)-100, tcornerX1 + 30, (abs(tcornerY1 + tcornerY2)/2)+ 50, tcornerX2 - 30, (abs(tcornerY1 + tcornerY2)/2)+50);
+	  fill("white");
+	  circle (450,  abs(tcornerY1 + tcornerY2)/2 - 70, 50);
+	  fill("black")
+	  circle (450,  abs(tcornerY1 + tcornerY2)/2 -70, 30);
+	  
   }
   if (head == 6){
 	  triangle (450, (abs(tcornerY1 + tcornerY2)/2)+100, tcornerX1 + 30, (abs(tcornerY1 + tcornerY2)/2)- 50, tcornerX2 - 30, (abs(tcornerY1 + tcornerY2)/2)-50);
+	  fill("white");
+	  circle (450,  abs(tcornerY1 + tcornerY2)/2 + 70, 50);
+	  fill("black")
+	  circle (450,  abs(tcornerY1 + tcornerY2)/2 +70, 30);
+	  
   }
 }
